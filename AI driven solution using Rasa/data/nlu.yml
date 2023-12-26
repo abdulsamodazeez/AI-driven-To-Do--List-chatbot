@@ -1,0 +1,29 @@
+version: "3.1"
+
+nlu:
+- intent: create_list
+  examples:
+    - text: create a new list
+    - text: start a to-do list
+
+- intent: add_item
+  examples:
+    - text: add {task} to my list
+    - text: include an {item} in my list
+
+- intent: remove_item
+  examples:
+    - text: remove {task} from my list
+    - text: delete an {item} from my list
+    - text: Remove {milk} from the list.
+    - text: Delete {bread} from my list.
+
+- intent: show_list
+  examples:
+    - text: show me my list
+    - text: display my to-do list
+
+- intent: mark_done
+  examples:
+    - text: mark a task as done
+    - text: complete an item

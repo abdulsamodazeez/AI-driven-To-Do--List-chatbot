@@ -1,0 +1,38 @@
+stories:
+  # User creates a new list
+  - story: create list
+    steps:
+      - intent: create_list
+      - action: action_create_list
+
+  # User adds an item to the list
+  - story: add item
+    steps:
+      - intent: add_item
+        entities:
+          - task: "Buy groceries"
+      - action: action_add_item
+
+  - story: remove item
+    steps:
+      - intent: remove_item
+        entities:
+          - task: "Buy groceries"  # Example entity value
+      - slot_was_set:
+        - user_list: ["Buy groceries"]  # Map the task to the slot
+      - action: action_remove_item
+
+
+  # User wants to see the entire list
+  - story: show list
+    steps:
+      - intent: show_list
+      - action: action_show_list
+
+  # User marks an item as done
+  - story: mark done
+    steps:
+      - intent: mark_done
+        entities:
+          - task: "Buy groceries"
+      - action: action_mark_done

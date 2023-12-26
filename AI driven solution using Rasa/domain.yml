@@ -1,0 +1,28 @@
+version: "3.1"
+
+intents:
+  - create_list
+  - add_item
+  - remove_item
+  - show_list
+  - mark_done
+
+entities:
+  - user_list
+  - task
+
+actions:
+  - action_create_list
+  - action_add_item
+  - action_remove_item
+  - action_show_list
+  - action_mark_done
+
+slots:
+  user_list:
+    type: list  # Specify the slot type as a list
+    influence_conversation: true
+    mappings:
+      - type: custom
+        entity: task  # Map the "task" entity to this slot
+
