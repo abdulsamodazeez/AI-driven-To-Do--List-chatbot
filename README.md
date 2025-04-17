@@ -1,4 +1,4 @@
-# README for Rasa-Based Conversational AI
+# Rasa-Based Conversational AI
 
 **Project Title: Rasa-Based ToDo Chatbot**
 
